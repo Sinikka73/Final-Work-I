@@ -4,7 +4,7 @@
 // либо задать на старте выполнения алгоритма. При решении 
 //не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-string[] generateArray(int length)
+string[] GenerateArray(int length)
 {
     string[] array = new string[length];
     for (int i = 0; i < length; i++)
@@ -15,9 +15,9 @@ string[] generateArray(int length)
     return array;
 }
 
-void printArray(string[] arrayToPrint, string name)
+void PrintArray(string[] arrayToPrint, string name)
 {
-    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
     Console.WriteLine($"------------{name} -----------");
     Console.ResetColor();
     Console.Write("[");
@@ -55,9 +55,9 @@ int lenght = Convert.ToInt32(Console.ReadLine());
 if(lenght > 0)
 {
     Console.WriteLine();
-    string[] currentArray = generateArray(lenght);
-    printArray(currentArray, "Исходный массив");
+    string[] currentArray = GenerateArray(lenght);
+    PrintArray(currentArray, "Исходный массив");
     string[] finalArray = GetResultArray(currentArray);
-    printArray(finalArray , "Полученный массив");
+    PrintArray(finalArray , "Полученный массив");
 }
 else Console.WriteLine("Задача не имеет решения");
